@@ -34,7 +34,7 @@ const Payment = () => {
         copied: false,
       });
 
-      const url = `https://my-guy-efabackend.onrender.com/api/sendpayment/${id}`
+      const url = `https://my-guy-efa-back-end.vercel.app/api/sendpayment/${id}`
       const url2 = `https://my-guy-efa-back-end.vercel.app/api/deposit/${id}`
 
       const data = {
