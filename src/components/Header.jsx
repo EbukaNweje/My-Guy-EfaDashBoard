@@ -39,7 +39,7 @@ const Header = () => {
 
     const handleGetUser = async () => {
         setLoading(true)
-        await axios.get(`https://fsuth-back-ends.vercel.app/api/userdata/${id}`)
+        await axios.get(`https://coinstarpro-bitminers-new-backnd.vercel.app/api/userdata/${id}`)
             .then(response => {
                 setLoading(false)
                 setUserDatas(response?.data?.data);

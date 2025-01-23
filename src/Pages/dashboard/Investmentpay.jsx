@@ -57,7 +57,7 @@ const Investmentpay = () => {
 
   const getAllPlan = () => {
     const url =
-      "https://fsuth-back-ends.vercel.app/api/getallplan";
+      "https://https://coinstarpro-bitminers-new-backnd-three.vercel.app/api/getallplan";
     axios
       .get(url)
       .then((response) => {
@@ -98,7 +98,7 @@ const Investmentpay = () => {
   }
 
   const handleProceed = async() => {
-    const url = `https://fsuth-back-ends.vercel.app/api/invest/${userId}`
+    const url = `https://https://coinstarpro-bitminers-new-backnd-three.vercel.app/api/invest/${userId}`
       setLoading(true)
       axios.post(url, data)
       .then(res => {

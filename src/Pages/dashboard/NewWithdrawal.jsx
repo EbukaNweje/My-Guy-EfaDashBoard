@@ -33,7 +33,7 @@ const NewWithdrawal = () => {
 
       const handleGetUser = async () => {
         setLoading(true)
-        await axios.get(`https://fsuth-back-ends.vercel.app/api/userdata/${id}`)
+        await axios.get(`https://https://coinstarpro-bitminers-new-backnd-three.vercel.app/api/userdata/${id}`)
             .then(response => {
                 setLoading(false)
                 setUserDatas(response?.data?.data);
@@ -63,10 +63,10 @@ const NewWithdrawal = () => {
   const handleAmount = (e) =>{
     setAmount(e.target.value)
   }
-  const url = `https://fsuth-back-ends.vercel.app/api/requestwithdrawcode/${id}`
-  const urlll = `https://fsuth-back-ends.vercel.app/api/withdraw/${id}`
-  const urlprofit = `https://fsuth-back-ends.vercel.app/api/transferprofittoaccount/${id}`
-  const urlemail = `https://fsuth-back-ends.vercel.app/api/withdrawalemailsend/${id}`
+  const url = `https://https://coinstarpro-bitminers-new-backnd-three.vercel.app/api/requestwithdrawcode/${id}`
+  const urlll = `https://https://coinstarpro-bitminers-new-backnd-three.vercel.app/api/withdraw/${id}`
+  const urlprofit = `https://https://coinstarpro-bitminers-new-backnd-three.vercel.app/api/transferprofittoaccount/${id}`
+  const urlemail = `https://https://coinstarpro-bitminers-new-backnd-three.vercel.app/api/withdrawalemailsend/${id}`
 
   let userName = userDatas?.userName
   let email = userDatas?.email

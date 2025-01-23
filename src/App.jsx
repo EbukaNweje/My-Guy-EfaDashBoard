@@ -27,7 +27,7 @@ import Withdrawals from "./pages/dashboard/Withdrawals";
 const App = () => {
     const router = createHashRouter([
         {
-            path: "",
+            path: "/",
             element: <Login />,
         },
         {
