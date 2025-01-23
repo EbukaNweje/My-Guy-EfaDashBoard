@@ -34,7 +34,7 @@ const [loading, setLoading] = useState(false)
     console.log(data);
     setLoading(true)
     e.preventDefault(); 
-    const url = 'https://https://coinstarpro-bitminers-new-backnd-three.vercel.app/api/login'
+    const url = 'https://new-swifteatrn-back-end-nine.vercel.app/api/login'
     const FormData ={
       email: data.email,
       password: data.password,
@@ -46,12 +46,16 @@ const [loading, setLoading] = useState(false)
        console.log("response:",response.data?._id);
        dispatch(userId(response?.data?._id))
        toast.success(response?.message)
-       Nav("/dashboard")
+      if (response?.data.verify === true) {
+        Nav("/dashboard")
+      } else {
+        Nav('/await')
+      }
     })
     .catch(error =>{
       setLoading(false)
-      toast.error(error?.response?.message)
-      console.log("error:",error)
+      toast.error(error.response.data.message)
+      console.log("error:",error.response.data.message)
     })
   };
   const currentYear = new Date().getFullYear();
@@ -120,7 +124,7 @@ const [loading, setLoading] = useState(false)
             </div>
             <div className="w-full phone:h-24 phone:gap-3 phone:flex-col phone:justify-center  phone:py-4 h-14 text-white px-48 flex items-center justify-between bg-[#0e1120]">
                 <div className="w-max flex items-center gap-4">
-                <p className="flex gap-5 items-center text-white">&copy;  Copy Rights {currentYear}. All Rights Reserved fininvestohub</p>
+                <p className="flex gap-5 items-center text-white">&copy;  Copy Rights {currentYear}. All Rights Reserved Swifteatrn Prime</p>
                 </div>
                 <div className="w-max flex items-center gap-5 ">
                     <FaTwitter />

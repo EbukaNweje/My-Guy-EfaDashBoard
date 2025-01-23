@@ -23,9 +23,9 @@ const Reset = () => {
               "Password must be 8 characters long, include an uppercase and special character (!@#$%^&*).",
           }),
         confirmPassword: z.string().min(1, { message: "Confirm Password is required" }),
-        check: z.boolean().refine((val) => val === true, {
-          message: "You must accept the terms and conditions.",
-        }),
+        // check: z.boolean().refine((val) => val === true, {
+        //   message: "You must accept the terms and conditions.",
+        // }),
       })
       .refine((data) => data.password === data.confirmPassword, {
         message: "Passwords do not match.",
@@ -36,9 +36,11 @@ const Reset = () => {
         resolver: zodResolver(User),
       });
     
-      const Onsubmit = async (data) => {
+      const Onsubmit = async (data, e) => {
             setLoading(true)
-            const url = `https://https://coinstarpro-bitminers-new-backnd-three.vercel.app/api/resetLink${id}/${token}`
+             e.preventDefault(); 
+
+            const url = `https://new-swifteatrn-back-end-nine.vercel.app/api/reset-password/${id}/${token}`
             const FormData ={
             password: data.password,
             confirmPassword: data.confirmPassword,
@@ -54,7 +56,7 @@ const Reset = () => {
              .catch(error=>{
                 setLoading(false)
                console.log("error:",error)
-               toast.error(error.data.message);
+               toast.error(error.response?.data?.message);
              })
       };
     return (
@@ -113,7 +115,7 @@ const Reset = () => {
             </div>
             <div className="w-full phone:h-24 phone:gap-3 phone:flex-col phone:justify-center  phone:py-4 h-14 text-white px-48 flex items-center justify-between bg-[#0e1120]">
                 <div className="w-max flex items-center gap-4">
-                <p className="flex gap-5 items-center text-white">&copy;  Copy Rights {currentYear}. All Rights Reserved fininvestohub</p>
+                <p className="flex gap-5 items-center text-white">&copy;  Copy Rights {currentYear}. All Rights Reserved Swifteatrn Prime</p>
                 </div>
                 <div className="w-max flex items-center gap-5 ">
                     <FaTwitter />
