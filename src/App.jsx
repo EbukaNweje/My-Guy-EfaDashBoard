@@ -1,6 +1,6 @@
 import {RouterProvider, createHashRouter} from "react-router-dom";
 import Login from "./pages/auth/Login"
-import Signup from "./pages/auth/Signup";
+import Signup from "./pages/auth/Signup"
 import Verify from "./pages/auth/Verify";
 import ErrorPage from "./components/ErrorPage";
 import DashboardRoute from "./routes/DashboardRoute";
