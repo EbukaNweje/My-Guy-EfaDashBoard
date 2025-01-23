@@ -1,5 +1,5 @@
 import {RouterProvider, createHashRouter} from "react-router-dom";
-import Login from "./pages/auth/Login";
+import Login from "./pages/auth/Login"
 import Signup from "./pages/auth/Signup";
 import Verify from "./pages/auth/Verify";
 import ErrorPage from "./components/ErrorPage";
@@ -27,7 +27,7 @@ import Withdrawals from "./pages/dashboard/Withdrawals";
 const App = () => {
     const router = createHashRouter([
         {
-            path: "/",
+            path: "",
             element: <Login />,
         },
         {
